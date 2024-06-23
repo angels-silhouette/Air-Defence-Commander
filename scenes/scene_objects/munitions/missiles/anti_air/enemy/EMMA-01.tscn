@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bchsrn2lhrk06"]
+
+[ext_resource type="Script" path="res://scenes/scene objects/munitions/missiles/anti air/enemy/EMMA-01.gd" id="1_cc01s"]
+
+[node name="missile" type="Node2D"]
+script = ExtResource("1_cc01s")

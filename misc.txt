@@ -1,0 +1,1 @@
+Vector3(horizontal along screen, vertical along screen, altitude)

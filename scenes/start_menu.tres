@@ -1,0 +1,54 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://62ntj43uvyfo"]
+
+[ext_resource type="FontFile" uid="uid://deslwh2w0cksq" path="res://assets/fonts/BigBlueTerminal/BigBlueTerm437NerdFontMono-Regular.ttf" id="1_fam3s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tv2o"]
+bg_color = Color(0.2, 0.878431, 0.0980392, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.356863, 0.560784, 0.270588, 1)
+shadow_size = 5
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jofq"]
+bg_color = Color(0.356863, 0.560784, 0.270588, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sa0ch"]
+
+[resource]
+default_font = ExtResource("1_fam3s")
+default_font_size = 32
+Button/font_sizes/default = 32
+Button/styles/normal = SubResource("StyleBoxFlat_4tv2o")
+Button/styles/pressed = SubResource("StyleBoxFlat_0jofq")
+Fonts/fonts/normal = ExtResource("1_fam3s")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0.356863, 0.560784, 0.270588, 1)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 1
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 5
+Label/font_sizes/title = 32
+Label/styles/normal = SubResource("StyleBoxEmpty_sa0ch")

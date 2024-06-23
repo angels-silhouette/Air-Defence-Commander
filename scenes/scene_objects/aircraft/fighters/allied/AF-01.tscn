@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://buespoxofl6d6"]
+
+[sub_resource type="GDScript" id="GDScript_kkkmd"]
+resource_local_to_scene = true
+script/source = "extends \"res://scenes/scene objects/aircraft/fighters/base_fighter.gd\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+    pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+    pass
+"
+
+[node name="aircraft" type="Node2D"]
+script = SubResource("GDScript_kkkmd")
+
+[node name="missile attachment point" type="Node2D" parent="."]

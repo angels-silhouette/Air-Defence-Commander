@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://o3ctqkfbbpuk"]
+
+[ext_resource type="Script" path="res://scenes/scene objects/ground unit/city/large/Large-City-01.gd" id="1_ke1kx"]
+
+[node name="Large-City-01" type="Node2D"]
+script = ExtResource("1_ke1kx")

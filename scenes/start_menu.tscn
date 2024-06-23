@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxymm76bisbo"]
+
+[ext_resource type="FontFile" uid="uid://deslwh2w0cksq" path="res://assets/fonts/BigBlueTerminal/BigBlueTerm437NerdFontMono-Regular.ttf" id="1_a73xf"]
+[ext_resource type="FontFile" uid="uid://hgkxrcji5ap8" path="res://assets/fonts/BigBlueTerminal/BigBlueTerm437NerdFont-Regular.ttf" id="1_hlu1b"]
+[ext_resource type="Script" path="res://scenes/start_menu.gd" id="1_ij60g"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5app5"]
+color = Color(0, 0.839216, 0.2, 1)
+grow_begin = 50.0
+grow_end = 50.0
+thickness = 3
+
+[sub_resource type="Theme" id="Theme_px6bt"]
+default_font = ExtResource("1_hlu1b")
+default_font_size = 32
+HSeparator/constants/separation = 10
+HSeparator/styles/separator = SubResource("StyleBoxLine_5app5")
+Label/font_sizes/font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_h4k0s"]
+font = ExtResource("1_a73xf")
+font_size = 64
+
+[node name="StartMenue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = SubResource("Theme_px6bt")
+script = ExtResource("1_ij60g")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TitleLable" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Air Defence Commander"
+label_settings = SubResource("LabelSettings_h4k0s")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="HSplitContainer" type="HSeparator" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StartButton" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

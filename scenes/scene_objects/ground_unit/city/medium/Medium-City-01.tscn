@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6affpdusl0a4"]
+
+[ext_resource type="Script" path="res://scenes/scene objects/ground unit/city/medium/Medium-City-01.gd" id="1_oy4l7"]
+
+[node name="Medium-City-01" type="Node2D"]
+script = ExtResource("1_oy4l7")
