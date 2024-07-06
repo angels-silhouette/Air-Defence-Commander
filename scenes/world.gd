@@ -5,8 +5,10 @@ extends Node2D
 
 var entities = []
 
+var game: Node2D
+
 func _ready():
-	pass
+	game = self.get_parent()
 
 
 func _process(delta):
@@ -15,3 +17,6 @@ func _process(delta):
 func register_entity(entity):
 	print(entity)
 	entities.append(entity)
+
+func quit_request():
+	game.quit_request()

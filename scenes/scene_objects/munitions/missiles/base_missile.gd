@@ -1,4 +1,4 @@
-extends "res://scenes/scene objects/munitions/base_munition.gd"
+extends "res://scenes/scene_objects/munitions/base_munition.gd"
 
 # Specifications
 @export var fuel: float # In seconds
@@ -10,10 +10,10 @@ var target: Node2D
 var target_coordinates: Vector3
 
 func course_correction():
-    pass
+	pass
 
 func _ready():
-    pass # Replace with function body.
+	pass # Replace with function body.
 
 func _process(delta):
-    pass
+	pass

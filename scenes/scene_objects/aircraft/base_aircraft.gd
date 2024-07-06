@@ -1,4 +1,4 @@
-extends "res://scenes/scene objects/base_object.gd"
+extends "res://scenes/scene_objects/base_object.gd"
 
 # The specifications of the aircraft
 @export var turn_rate_fast: float # In radians per second (the rate of turn as it approaches cruise speed)
@@ -15,7 +15,7 @@ var target: Node2D
 var target_coordinates: Vector3
 
 func _ready():
-    pass
+	pass
 
 func _process(_delta):
-    pass
+	pass

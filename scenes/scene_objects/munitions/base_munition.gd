@@ -1,4 +1,4 @@
-extends "res://scenes/scene objects/base_object.gd"
+extends "res://scenes/scene_objects/base_object.gd"
 
 @export var damage: float # how much damage it does to a target
 @export var drag: float # Works to counter thrust as airspeed increases to keep from going too fast

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cmxwc5g651856" path="res://scenes/world.tscn" id="2_c3bcd"]
 [ext_resource type="PackedScene" uid="uid://bhqauxkrrllg0" path="res://scenes/player.tscn" id="2_ca6lv"]
 [ext_resource type="PackedScene" uid="uid://c2j2v4bxc3qeg" path="res://scenes/enemy.tscn" id="4_qogmf"]
-[ext_resource type="PackedScene" uid="uid://cjj31t4x6b2j7" path="res://scenes/misc_object.tscn" id="5_xncrw"]
+[ext_resource type="Texture2D" uid="uid://cliu8xtxi385n" path="res://working_assets/icon.svg" id="5_afew8"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_dx3bu")
@@ -12,9 +12,10 @@ script = ExtResource("1_dx3bu")
 [node name="world" parent="." instance=ExtResource("2_c3bcd")]
 
 [node name="player" parent="world" instance=ExtResource("2_ca6lv")]
-position = Vector2(611, 328)
+position = Vector2(598, 343)
 
 [node name="enemy" parent="world" instance=ExtResource("4_qogmf")]
 
-[node name="Node2D" parent="." instance=ExtResource("5_xncrw")]
-position = Vector2(195, 97)
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(424, 181)
+texture = ExtResource("5_afew8")

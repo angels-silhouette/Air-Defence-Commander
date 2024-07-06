@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ckvcl4wv3njs6"]
 
-[ext_resource type="Script" path="res://scenes/scene objects/other/small_bird.gd" id="1_egj3a"]
+[ext_resource type="Script" path="res://scenes/scene_objects/other/small_bird.gd" id="1_d0ijb"]
 
-[node name="bird" type="Node2D"]
-script = ExtResource("1_egj3a")
+[node name="SmallBird" type="Node2D"]
+script = ExtResource("1_d0ijb")

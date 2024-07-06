@@ -1,4 +1,4 @@
-extends "res://scenes/scene objects/ground unit/radar/base_radar.gd"
+extends "res://scenes/scene_objects/ground_unit/radar/base_radar.gd"
 
 
 # Called when the node enters the scene tree for the first time.
