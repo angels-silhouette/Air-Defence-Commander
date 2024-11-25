@@ -1,64 +1,47 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxymm76bisbo"]
+[gd_scene load_steps=3 format=3 uid="uid://dxymm76bisbo"]
 
-[ext_resource type="FontFile" uid="uid://deslwh2w0cksq" path="res://assets/fonts/BigBlueTerminal/BigBlueTerm437NerdFontMono-Regular.ttf" id="1_a73xf"]
-[ext_resource type="FontFile" uid="uid://hgkxrcji5ap8" path="res://assets/fonts/BigBlueTerminal/BigBlueTerm437NerdFont-Regular.ttf" id="1_hlu1b"]
 [ext_resource type="Script" path="res://scenes/start_menu.gd" id="1_ij60g"]
+[ext_resource type="Theme" uid="uid://62ntj43uvyfo" path="res://assets/theme.tres" id="1_yf2mb"]
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_5app5"]
-color = Color(0, 0.839216, 0.2, 1)
-grow_begin = 50.0
-grow_end = 50.0
-thickness = 3
-
-[sub_resource type="Theme" id="Theme_px6bt"]
-default_font = ExtResource("1_hlu1b")
-default_font_size = 32
-HSeparator/constants/separation = 10
-HSeparator/styles/separator = SubResource("StyleBoxLine_5app5")
-Label/font_sizes/font_size = 64
-
-[sub_resource type="LabelSettings" id="LabelSettings_h4k0s"]
-font = ExtResource("1_a73xf")
-font_size = 64
-
-[node name="StartMenue" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-theme = SubResource("Theme_px6bt")
+[node name="StartMenue" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yf2mb")
 script = ExtResource("1_ij60g")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="TitleLable" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Air Defence Commander"
-label_settings = SubResource("LabelSettings_h4k0s")
-horizontal_alignment = 1
-uppercase = true
+theme_override_font_sizes/font_size = 64
+text = "AIR DEFENCE COMMANDER"
 
-[node name="HSplitContainer" type="HSeparator" parent="CenterContainer/MarginContainer/VBoxContainer"]
+[node name="HSplitContainer" type="HSeparator" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="StartButton" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Start"
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "START"
 
-[node name="QuitButton" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Quit"
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "QUIT
+"
 
-[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

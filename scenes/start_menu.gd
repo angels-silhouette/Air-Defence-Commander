@@ -1,4 +1,4 @@
-extends Control
+extends CenterContainer
 
 func _ready():
 	pass

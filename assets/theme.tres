@@ -1,0 +1,39 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://62ntj43uvyfo"]
+
+[ext_resource type="FontFile" uid="uid://6a755ajkbbij" path="res://assets/fonts/BigBlueTerminal/BigBlueTermPlusNerdFontMono-Regular.ttf" id="1_jilf1"]
+[ext_resource type="StyleBox" uid="uid://dxd5blc1n3tkv" path="res://assets/style_box_flat_darkest.tres" id="2_7jv3d"]
+[ext_resource type="StyleBox" uid="uid://db0qgrjv30yoo" path="res://assets/style_box_flat_dark.tres" id="2_i4q16"]
+[ext_resource type="StyleBox" uid="uid://ctelxcb735pwc" path="res://assets/style_box_flat_light.tres" id="3_lj3fm"]
+[ext_resource type="StyleBox" uid="uid://blomgf5bxrh8r" path="res://assets/style_box_flat_darker.tres" id="4_o73sg"]
+[ext_resource type="StyleBox" uid="uid://cpn0pljqpsov3" path="res://assets/style_box_flat_dark_borderless.tres" id="6_ufm5a"]
+[ext_resource type="StyleBox" uid="uid://c6vr6w0xs24p2" path="res://assets/style_box_flat_darker_borderless.tres" id="6_y673g"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_omane"]
+color = Color(0, 0.784314, 0, 1)
+grow_begin = 50.0
+grow_end = 50.0
+thickness = 2
+
+[resource]
+Button/fonts/font = ExtResource("1_jilf1")
+Button/styles/disabled = ExtResource("2_7jv3d")
+Button/styles/focus = ExtResource("2_i4q16")
+Button/styles/hover = ExtResource("2_i4q16")
+Button/styles/normal = ExtResource("4_o73sg")
+Button/styles/pressed = ExtResource("3_lj3fm")
+FlatButton/styles/disabled = ExtResource("2_7jv3d")
+FlatButton/styles/hover = ExtResource("2_i4q16")
+FlatButton/styles/normal = ExtResource("4_o73sg")
+FlatButton/styles/pressed = ExtResource("3_lj3fm")
+HSeparator/styles/separator = SubResource("StyleBoxLine_omane")
+Label/colors/font_shadow_color = Color(0, 0.392157, 0, 1)
+Label/constants/shadow_outline_size = 2
+Label/fonts/font = ExtResource("1_jilf1")
+MenuButton/styles/disabled = ExtResource("2_7jv3d")
+MenuButton/styles/focus = ExtResource("2_i4q16")
+MenuButton/styles/hover = ExtResource("2_i4q16")
+MenuButton/styles/normal = ExtResource("4_o73sg")
+MenuButton/styles/pressed = ExtResource("3_lj3fm")
+PopupMenu/styles/hover = ExtResource("6_ufm5a")
+PopupMenu/styles/panel = ExtResource("6_y673g")
+VBoxContainer/constants/separation = 15

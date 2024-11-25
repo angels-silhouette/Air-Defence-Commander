@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://djebarfvr83yg"]
+
+[ext_resource type="Script" path="res://scenes/misc_objects_spawner.gd" id="1_1eupc"]
+
+[node name="MiscObjectsSpawner" type="Node2D"]
+script = ExtResource("1_1eupc")

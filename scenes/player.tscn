@@ -1,47 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhqauxkrrllg0"]
+[gd_scene load_steps=3 format=3 uid="uid://bhqauxkrrllg0"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_si8ud"]
-[ext_resource type="FontFile" uid="uid://hgkxrcji5ap8" path="res://assets/fonts/BigBlueTerminal/BigBlueTerm437NerdFont-Regular.ttf" id="2_sqtl6"]
+[ext_resource type="Theme" uid="uid://62ntj43uvyfo" path="res://assets/theme.tres" id="2_befvw"]
 
-[sub_resource type="Theme" id="Theme_j00j5"]
-default_font = ExtResource("2_sqtl6")
-default_font_size = 12
-Button/font_sizes/font_size = 16
-MarginContainer/constants/margin_bottom = 10
-MarginContainer/constants/margin_left = 10
-MarginContainer/constants/margin_right = 10
-MarginContainer/constants/margin_top = 10
-
-[node name="player" type="Node2D"]
+[node name="Player" type="Node2D"]
 script = ExtResource("1_si8ud")
 
-[node name="UI" type="Control" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 576.0
-offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = SubResource("Theme_j00j5")
-metadata/_edit_lock_ = true
+theme = ExtResource("2_befvw")
 
-[node name="MarginContainer" type="MarginContainer" parent="UI"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI"]
 layout_mode = 1
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
 
-[node name="ExitButton" type="Button" parent="UI/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/MarginContainer"]
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/UI/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Exit"
-metadata/_edit_use_anchors_ = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-metadata/_edit_lock_ = true
+[node name="QuitButton" type="Button" parent="CanvasLayer/UI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Quit"
 
-[connection signal="pressed" from="UI/MarginContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/MarginContainer/HBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/MarginContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
