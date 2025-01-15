@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cplby2maepcc1"]
+
+[ext_resource type="Script" path="res://scenes/scene_objects/munitions/missiles/base_missile.gd" id="1_jmlq1"]
+
+[node name="BaseMissile" type="Node2D"]
+script = ExtResource("1_jmlq1")

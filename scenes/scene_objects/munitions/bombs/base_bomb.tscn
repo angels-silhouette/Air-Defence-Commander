@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://tv7fvh1wsp46"]
+
+[ext_resource type="Script" path="res://scenes/scene_objects/munitions/bombs/base_bomb.gd" id="1_r0m18"]
+
+[node name="BaseBomb" type="Node2D"]
+script = ExtResource("1_r0m18")

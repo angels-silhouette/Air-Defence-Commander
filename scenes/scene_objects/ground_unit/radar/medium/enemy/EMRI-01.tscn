@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd4wy5nok0jo7"]
-
-[ext_resource type="Script" path="res://scenes/scene objects/ground unit/radar/medium/enemy/EMRI-01.gd" id="1_qfp61"]
-
-[node name="radar" type="Node2D"]
-script = ExtResource("1_qfp61")

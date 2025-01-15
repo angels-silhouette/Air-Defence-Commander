@@ -11,6 +11,9 @@ func _ready():
 func _process(_delta):
 	pass
 
+func initialise_world(number_of_AIs):
+	print(number_of_AIs)
+
 func register_entity(entity):
 	print(entity)
 	entities.append(entity)

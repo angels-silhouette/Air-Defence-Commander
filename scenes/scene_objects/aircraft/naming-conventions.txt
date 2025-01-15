@@ -1,4 +1,0 @@
-A/E: Allied/Enemy
-B/F: Bomber/Fighter
--
-##: Version

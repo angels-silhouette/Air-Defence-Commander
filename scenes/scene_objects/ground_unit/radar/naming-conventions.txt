@@ -1,6 +1,0 @@
-A/E: Allied/Enemy
-S/M/L: Small/Medium/Large
-R: Radar
-I: Installation
--
-##: version

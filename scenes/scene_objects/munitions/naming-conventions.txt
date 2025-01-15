@@ -1,6 +1,0 @@
-A/E: Allied/Enemy
-M: Munition
-M/B: Missile/Bomb
-	MA/MG: Missile Air/Missile Ground
--
-##: Version

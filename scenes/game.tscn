@@ -1,23 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdlpdolg5b1i4"]
+[gd_scene load_steps=4 format=3 uid="uid://cdlpdolg5b1i4"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_dx3bu"]
-[ext_resource type="PackedScene" uid="uid://c2j2v4bxc3qeg" path="res://scenes/enemy.tscn" id="2_afojm"]
+[ext_resource type="PackedScene" uid="uid://c2j2v4bxc3qeg" path="res://scenes/AI.tscn" id="2_afojm"]
 [ext_resource type="PackedScene" uid="uid://bhqauxkrrllg0" path="res://scenes/player.tscn" id="3_ga60c"]
-[ext_resource type="PackedScene" uid="uid://djebarfvr83yg" path="res://scenes/misc_objects_spawner.tscn" id="4_42q3g"]
-[ext_resource type="Texture2D" uid="uid://cliu8xtxi385n" path="res://working_assets/icon.svg" id="5_fmo06"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_dx3bu")
 
-[node name="Enemy" parent="." instance=ExtResource("2_afojm")]
-position = Vector2(191, 495)
-
 [node name="Player" parent="." instance=ExtResource("3_ga60c")]
-position = Vector2(277, 333)
+position = Vector2(625, 276)
 
-[node name="MiscObjectsSpawner" parent="." instance=ExtResource("4_42q3g")]
-position = Vector2(263, 235)
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(423, 232)
-texture = ExtResource("5_fmo06")
+[node name="AI" parent="." instance=ExtResource("2_afojm")]
+position = Vector2(405, 314)
