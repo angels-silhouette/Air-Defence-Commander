@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Air Defence Commander"
 run/main_scene="res://scenes/start_menu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 run/max_fps=60
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://working_assets/icon.svg"
@@ -29,14 +29,9 @@ settings/stdout/print_fps=true
 settings/stdout/print_gpu_profile=true
 settings/stdout/verbose_stdout=true
 
-[display]
-
-window/size/mode=3
-
 [dotnet]
 
-project/assembly_name="Air defence commander"
-project/solution_directory="dotnet"
+project/assembly_name="Air Defence Commander"
 
 [input]
 

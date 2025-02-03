@@ -1,14 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdlpdolg5b1i4"]
+[gd_scene load_steps=7 format=3 uid="uid://cdlpdolg5b1i4"]
 
+[ext_resource type="Shader" path="res://scenes/map.gdshader" id="1_1ky51"]
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_dx3bu"]
-[ext_resource type="PackedScene" uid="uid://c2j2v4bxc3qeg" path="res://scenes/AI.tscn" id="2_afojm"]
-[ext_resource type="PackedScene" uid="uid://bhqauxkrrllg0" path="res://scenes/player.tscn" id="3_ga60c"]
+[ext_resource type="TileSet" uid="uid://du5tse7olnvo7" path="res://assets/black_to_green_tile_set.tres" id="2_278n2"]
+[ext_resource type="Script" path="res://scenes/terrain_map.gd" id="3_uw672"]
+[ext_resource type="PackedScene" uid="uid://bhqauxkrrllg0" path="res://scenes/player.tscn" id="4_1km61"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8uu2d"]
+resource_local_to_scene = true
+shader = ExtResource("1_1ky51")
 
 [node name="Game" type="Node2D"]
+material = SubResource("ShaderMaterial_8uu2d")
 script = ExtResource("1_dx3bu")
 
-[node name="Player" parent="." instance=ExtResource("3_ga60c")]
-position = Vector2(625, 276)
+[node name="TerrainMap" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_278n2")
+script = ExtResource("3_uw672")
 
-[node name="AI" parent="." instance=ExtResource("2_afojm")]
-position = Vector2(405, 314)
+[node name="Player" parent="." instance=ExtResource("4_1km61")]

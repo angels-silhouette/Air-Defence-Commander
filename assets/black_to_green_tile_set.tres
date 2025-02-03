@@ -1,0 +1,32 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://du5tse7olnvo7"]
+
+[ext_resource type="Texture2D" uid="uid://basq2drh0yphm" path="res://assets/black_to_green.png" id="1_lqc0e"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tn6t"]
+texture = ExtResource("1_lqc0e")
+texture_region_size = Vector2i(1, 1)
+0:0/0 = 0
+1:0/animation_columns = 11
+1:0/0 = 0
+3:0/animation_columns = 11
+3:0/0 = 0
+2:0/animation_columns = 11
+2:0/0 = 0
+4:0/animation_columns = 11
+4:0/0 = 0
+5:0/animation_columns = 11
+5:0/0 = 0
+6:0/animation_columns = 11
+6:0/0 = 0
+7:0/animation_columns = 11
+7:0/0 = 0
+8:0/animation_columns = 11
+8:0/0 = 0
+9:0/animation_columns = 11
+9:0/0 = 0
+10:0/animation_columns = 11
+10:0/0 = 0
+
+[resource]
+tile_size = Vector2i(1, 1)
+sources/0 = SubResource("TileSetAtlasSource_5tn6t")

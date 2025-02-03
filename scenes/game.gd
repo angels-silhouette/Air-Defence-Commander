@@ -1,25 +1,24 @@
 extends Node2D
 
-# Environmental constants
 @export var ENVIRONMENTAL_ACCELERATION: Vector3 = Vector3(0, 0, -9.8) # meters per second per second
+
+@export var number_of_AIs: int = 1
+@export var map_size: Vector2i = Vector2i(100, 100)
 
 var entities = []
 
+signal generate_map(map_size)
+
 func _ready():
-	pass
-
-func _process(_delta):
-	pass
-
-func initialise_world(number_of_AIs):
-	print(number_of_AIs)
+	generate_map.emit(map_size)
 
 func register_entity(entity):
-	print(entity)
 	entities.append(entity)
 
 func quit_request():
-	self.get_tree().quit()
+	get_tree().quit()
 
 func exit_to_menu_request():
-	self.get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
+	var start_menu: Node = load("res://scenes/start_menu.tscn").instantiate()
+	add_sibling(start_menu)
+	queue_free()

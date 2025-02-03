@@ -9,6 +9,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("1_yf2mb")
 script = ExtResource("1_ij60g")
 
@@ -30,14 +32,17 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="NumberOfAIsLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="NumberOfAIsLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
 text = "Number of AIs:"
 
-[node name="NumberOfAIs" type="SpinBox" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="NumberOfAIs" type="SpinBox" parent="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
 min_value = 1.0
 max_value = 5.0
@@ -45,19 +50,42 @@ value = 1.0
 rounded = true
 alignment = 1
 
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer2"]
+layout_mode = 2
+
+[node name="SizeOfMapLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer2"]
+layout_mode = 2
+text = "Size of map (km): "
+
+[node name="SizeOfMap" type="SpinBox" parent="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer2"]
+layout_mode = 2
+min_value = 100.0
+max_value = 1000.0
+step = 100.0
+value = 100.0
+rounded = true
+alignment = 1
+
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "START"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "QUIT
 "
 
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/NumberOfAIs" to="." method="_on_number_of_AIs_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer/HBoxContainer/NumberOfAIs" to="." method="_on_number_of_AIs_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer2/SizeOfMap" to="." method="_on_number_of_AIs_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer2/SizeOfMap" to="." method="_on_size_of_map_value_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
