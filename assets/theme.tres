@@ -15,6 +15,7 @@ grow_end = 50.0
 thickness = 2
 
 [resource]
+BoxContainer/constants/separation = 15
 Button/fonts/font = ExtResource("1_jilf1")
 Button/styles/disabled = ExtResource("2_7jv3d")
 Button/styles/focus = ExtResource("2_i4q16")
@@ -29,6 +30,10 @@ HSeparator/styles/separator = SubResource("StyleBoxLine_omane")
 Label/colors/font_shadow_color = Color(0, 0.392157, 0, 1)
 Label/constants/shadow_outline_size = 2
 Label/fonts/font = ExtResource("1_jilf1")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
 MenuButton/styles/disabled = ExtResource("2_7jv3d")
 MenuButton/styles/focus = ExtResource("2_i4q16")
 MenuButton/styles/hover = ExtResource("2_i4q16")
@@ -36,4 +41,3 @@ MenuButton/styles/normal = ExtResource("4_o73sg")
 MenuButton/styles/pressed = ExtResource("3_lj3fm")
 PopupMenu/styles/hover = ExtResource("6_ufm5a")
 PopupMenu/styles/panel = ExtResource("6_y673g")
-VBoxContainer/constants/separation = 15
