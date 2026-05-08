@@ -1,2 +1,2 @@
 Vector3(horizontal along screen, vertical along screen, altitude)
-1 pixel is 1 decameter
+100 pixels = 1 tile = 1 decameter: 1 pixel is 10 centimeters

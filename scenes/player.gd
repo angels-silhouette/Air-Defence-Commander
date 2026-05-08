@@ -25,7 +25,7 @@ var min_scale: float = 0.1
 
 func _process(delta):
 	var velocity_zoom_coefficent = 1 / camera.zoom.length()
-	
+
 	if Input.is_action_pressed("up"):
 		velocity.y -= velocity_sensitivity * velocity_zoom_coefficent * delta
 	if Input.is_action_pressed("down"):
@@ -38,7 +38,7 @@ func _process(delta):
 		zoom_velocity += zoom_sensitivity * delta
 	if Input.is_action_pressed("out"):
 		zoom_velocity -= zoom_sensitivity * delta
-	
+
 	# movement
 	position += velocity
 	var zoom_change = Vector2(1, 1) * zoom_velocity
@@ -50,7 +50,7 @@ func _process(delta):
 		zoom_velocity = 0
 	else:
 		camera.zoom += zoom_change
-	
+
 	# deceleartion
 	zoom_velocity -= zoom_velocity * zoom_decerlation * delta
 	velocity -= velocity * velocity_decerlation * delta
