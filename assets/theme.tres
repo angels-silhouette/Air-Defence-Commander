@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://62ntj43uvyfo"]
+[gd_resource type="Theme" format=3 uid="uid://62ntj43uvyfo"]
 
 [ext_resource type="FontFile" uid="uid://6a755ajkbbij" path="res://assets/fonts/BigBlueTerminal/BigBlueTermPlusNerdFontMono-Regular.ttf" id="1_jilf1"]
 [ext_resource type="StyleBox" uid="uid://dxd5blc1n3tkv" path="res://assets/style_box_flat_darkest.tres" id="2_7jv3d"]

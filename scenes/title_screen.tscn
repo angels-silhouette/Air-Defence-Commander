@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dxymm76bisbo"]
+
+[ext_resource type="Theme" uid="uid://62ntj43uvyfo" path="res://assets/theme.tres" id="1_s4lrb"]
+[ext_resource type="Script" uid="uid://baaaiw4258h8g" path="res://scenes/title_screen.gd" id="2_mgrm8"]
+[ext_resource type="PackedScene" uid="uid://cy6yylemm4uw8" path="res://scenes/air_defence_menu.tscn" id="3_dc4i4"]
+[ext_resource type="PackedScene" uid="uid://dobr5oi2efg4e" path="res://scenes/start_menu.tscn" id="3_mgrm8"]
+
+[node name="TitleScreen" type="CenterContainer" unique_id=88819369]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_s4lrb")
+script = ExtResource("2_mgrm8")
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=622194674]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=291960306]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1663508982]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "HIGH COMMAND"
+
+[node name="HSplitContainer" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1228049818]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2141506564]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1820962829]
+layout_mode = 2
+text = "GAME MODE"
+horizontal_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=791105936]
+layout_mode = 2
+tab_alignment = 1
+current_tab = 1
+
+[node name="StartMenu" parent="MarginContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=2124585075 instance=ExtResource("3_mgrm8")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="AirDefenceMenu" parent="MarginContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=1979907653 instance=ExtResource("3_dc4i4")]
+layout_mode = 2
+metadata/_tab_index = 1

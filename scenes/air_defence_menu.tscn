@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cy6yylemm4uw8"]
+
+[node name="AirDefenceMenu" type="Control" unique_id=1979907653]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1664544554]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" unique_id=65313278]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/CenterContainer" unique_id=2006496016]
+layout_mode = 2
+
+[node name="NumberOfAIsLabel" type="Label" parent="VBoxContainer/CenterContainer/HBoxContainer" unique_id=1895192406]
+layout_mode = 2
+text = "Number of AIs:"
+
+[node name="NumberOfAIs" type="SpinBox" parent="VBoxContainer/CenterContainer/HBoxContainer" unique_id=1197980792]
+layout_mode = 2
+min_value = 1.0
+max_value = 5.0
+value = 1.0
+rounded = true
+alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer" unique_id=1964179780]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/CenterContainer2" unique_id=844447139]
+layout_mode = 2
+
+[node name="SizeOfMapLabel" type="Label" parent="VBoxContainer/CenterContainer2/HBoxContainer2" unique_id=667870866]
+layout_mode = 2
+text = "Size of map (km): "
+
+[node name="SizeOfMap" type="SpinBox" parent="VBoxContainer/CenterContainer2/HBoxContainer2" unique_id=20461171]
+layout_mode = 2
+min_value = 100.0
+max_value = 1000.0
+step = 100.0
+value = 100.0
+rounded = true
+alignment = 1
